@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Hello World</title>
+  <style>* {padding: 0; margin: 0}</style> 
+  <link rel="stylesheet" href="styles.css" />
+
+  <link rel="stylesheet" type="text/css" href="./semantic/semantic.min.css">
+  <script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
+  <script src="semantic/semantic.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="range/range.css">
+  <script src="range/range.js"></script>
+</head>
+  <script src="rainbowvis/rainbowvis.js"></script>
+  <script src="pixi.min.js"></script>
+  <script src="victor.min.js"></script>
+  <script src="pixiutils.js"></script>
+  <script src="viewport.js"></script>
+  <script src="ui.js"></script>
+  
+    <div class="ui left fixed vertical menu" id="menu">
+      <div class="item">
+          <h3 class="ui header">Animation</h3>
+
+          <button class="ui button blue" style="width: 31%" onClick="setMoving(true)">
+            Start
+          </button>
+          
+          <button class="ui button" style="width: 31%" onClick="setMoving(false)">
+            Stop
+          </button>
+
+          <button class="ui button" style="width: 31%" onClick="resetCurve()">
+            Reset
+          </button>
+
+          <br /> <br />
+
+          <button class="ui button fluid blue" onClick="setPoint()">
+            Set Point
+          </button>
+
+      </div>
+
+        <div class="item">
+          <h3 class="ui header">Variables</h3>
+
+          Air Resistance
+          <div class="ui range blue" id="mu"></div>
+          <br />
+          String Length
+          <div class="ui range blue" id="L"></div>
+          <br />
+          Samples (Δt)
+          <div class="ui range blue" id="samples"></div>
+
+        </div>
+        <div class="item" >
+            <h3 class="ui header">Display</h3>
+            <div class="ui checkbox">
+                <input type="checkbox" name="field" checked="checked" onChange="fieldVisibility(this)">
+                <label>Vector Field</label>
+            </div>
+            <br /> <br />
+            <div class="ui checkbox">
+                <input type="checkbox" name="pendulum" checked="checked" onChange="pendulumVisibility(this)">
+                <label>Show Pendulum</label>
+            </div>
+            <br /> <br />
+            <div class="ui checkbox">
+                <input type="checkbox" name="pencurve" checked="checked" onChange="showCurve(this.checked)">
+                <label>Pendulum Path</label>
+            </div>
+            <br /> <br />
+            <div class="ui checkbox">
+                <input type="checkbox" name="timecurve" onChange="showTimeCurve(this.checked)">
+                <label>Time Curve</label>
+            </div>
+            <br /> <br />
+            <!--Vector Field Range-->
+            <!--<div class="ui range blue" id="fieldrange"></div>-->
+        </div>
+      </div>
+
+    <div id="display" />
+
+  <script type="text/javascript" src="main.js"></script>
+</body>
+</html>

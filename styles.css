@@ -1,0 +1,16 @@
+body {
+    overflow:hidden;
+}
+
+#displaybox {
+   
+}
+
+#display>* {
+    position: absolute;
+    display: block;
+}
+
+#menu {
+    width: 300px
+}
